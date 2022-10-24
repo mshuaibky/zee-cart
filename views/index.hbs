@@ -1,0 +1,38 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            {{#if user}}
+            {{#each products}}
+            <div class="col-md-3  mt-4 mx-4 ">
+                <div class="card  text-center " style="width: 18rem;">
+                    <img style="width: 286px;height: 286px;object-fit: contain;" src="/product-image/{{this._id}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title ">{{this.name}}</h5>
+                        <p class="card-text">{{this.price}}</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div><br>
+        
+            {{/each}}
+
+            {{else}}
+            {{#each products}}
+            <div class="col-md-3  me-5">
+                <div class="card" style="width: 18rem;">
+                    <img style="width: 286px;height: 286px;object-fit: contain;" src="/product-image/{{this._id}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.price}}</p>
+                        <a href="#" class="btn btn-primary">Login to shop</a>
+                    </div>
+                </div>
+            </div>
+
+            {{/each}}
+            {{/if}}
+
+
+        </div>
+    </div>
+</section>
